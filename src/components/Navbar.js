@@ -1,9 +1,10 @@
 import React from 'react';
-import logoYing from '../logoY.png';
+import './Navbar.css';
+import logoYing from '../img/logoY.png';
 
 function Navbar() {
   return (
-    <nav className='navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark'>
+    <nav className='navbar navbar-expand-lg navbar-expand-md navbar-black bg-black'>
       <div className='container-fluid'>
         <a className='navbar-brand' href='#'>
           <img src={logoYing} alt='logo' width='70' height='70' className='logo' />
