@@ -11,7 +11,7 @@
 .navbar-collapse {
   justify-content: end;
 }
-.navbar-nav > li > a {
+.navbar-nav > li > .navbar-link {
   color: var(--primary-white) !important;
   font-size: small;
   margin-right: 0.75rem;
@@ -20,7 +20,20 @@
   border-top: 0.04rem solid var(--primary-dark);
 }
 
-.navbar-nav > li > a.active,
-.navbar-nav > li > a:focus {
+.navbar-nav > li > .navbar-link.active,
+.navbar-nav > li > .navbar-link:focus {
   border-top: 0.2rem solid var(--light-purple);
+}
+/* .navbar-toggler-icon {
+  background: var(--light-purple);
+  border-radius: 50px;
+} */
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: var(--light-purple);
+  display: block;
+  transition: all 0.2s;
+  margin: 5px;
 }

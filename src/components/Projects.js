@@ -1,57 +1,34 @@
-import { useState, useEffect } from 'react';
-import Card from './Card';
-import './Card.css'
-
-// Return a promise
-const getRepos = (url) => {
-
-  // return fetch(url, {
-  //   headers: {
-  //     'Accept': 'application/vnd.github.v3+json',
-  //   },
-  // })
-  //   .then((res) => {
-  //     res.json();
-  //   })
-  //   .then((data) => {
-  //     return data
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
-
-    return [
-        {
-          name: 'Repo 1',
-          description: 'my description'
-        },
-        {
-          name: 'Repo 2',
-          description: 'my second description'
-        }
-    ]
-};
+import React, { useState, useEffect } from 'react';
+import PortfolioCard from './PortfolioCard';
+import './PortfolioCard.css';
+import API from '../utils/API'
 
 const Projects = () => {
-  const [repos, setRepos] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  // get repos
+  // get projects
   useEffect(() => {
-    // getRepos('https://api.github.com/users/yingliii/repos').then(data => {
-    //   setRepos(data)
-    // });
-    setRepos(getRepos('https://api.github.com/users/yingliii/repos'))
+    API.getProjects()
+      .then(res => setProjects(res))
+      .catch(err => console.log(err));
   }, []); // [] means runs once
 
   return (
-    <div className="card-list">
-      {repos.map((repo, idx) => (
-        <Card
-          key={idx}
-          name={repo.name} 
-          description={repo.description}
-        />
-      ))}
+    <div>
+    <h2>Portfolios</h2>
+      <div className="card-list">
+        {projects.map(project => (
+            <PortfolioCard
+              key={project.title}
+              name={project.title} 
+              description={project.description}
+              imageUrl={project.imageUrl}
+              githubUrl={project.githubUrl}
+              deployedUrl={project.deployedUrl}
+            />
+        ))
+        }
+      </div>
     </div>
   )
 };

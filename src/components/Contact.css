@@ -1,0 +1,24 @@
+.contact-heading {
+  padding-top: 10px;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field {
+  display: flex;
+  align-self: center;
+}
+.label {
+  padding: 10px;
+}
+.input {
+  align-self: flex-start;
+}
+.button {
+  background-color: black;
+  border: none;
+  color: aliceblue;
+  margin: 10px;
+}
