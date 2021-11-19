@@ -40,56 +40,58 @@ function Contact() {
     <div>
       <h4 className='contact-heading'>Contact Me</h4>
       <hr />
-      <form id='contact-form' onSubmit={handleSubmit}>
-        <div className='field'>
-          <label className='label' htmlFor='name'>
-            Name:
-          </label>
-          <input
-            className='input'
-            type='text'
-            name='name'
-            defaultValue={name}
-            onBlur={handleChange}
-          />
-        </div>
-        <div className='field'>
-          <label className='label' htmlFor='email'>
-            Email:{' '}
-          </label>
-          <input
-            className='input'
-            type='email'
-            name='email'
-            defaultValue={email}
-            onBlur={handleChange}
-          />
-        </div>
-        <div className='field'>
-          <label className='label' htmlFor='message'>
-            Message:
-          </label>
-          <textarea
-            className='textarea input'
-            name='message'
-            rows='5'
-            defaultValue={message}
-            onBlur={handleChange}
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className='is-danger'>{errorMessage}</p>
+      <div className='contact-body'>
+        <form id='contact-form' onSubmit={handleSubmit}>
+          <div className='field'>
+            <label className='label' htmlFor='name'>
+              Name:
+            </label>
+            <input
+              className='input'
+              type='text'
+              name='name'
+              defaultValue={name}
+              onBlur={handleChange}
+            />
           </div>
-        )}
-        <button
-          className='button is-medium is-primary is-fullwidth'
-          data-testid='button'
-          type='submit'
-        >
-          Submit
-        </button>
-      </form>
+          <div className='field'>
+            <label className='label' htmlFor='email'>
+              Email:{' '}
+            </label>
+            <input
+              className='input'
+              type='email'
+              name='email'
+              defaultValue={email}
+              onBlur={handleChange}
+            />
+          </div>
+          <div className='field'>
+            <label className='label' htmlFor='message'>
+              Message:
+            </label>
+            <textarea
+              className='textarea input'
+              name='message'
+              rows='5'
+              defaultValue={message}
+              onBlur={handleChange}
+            />
+          </div>
+          {errorMessage && (
+            <div>
+              <p className='is-danger'>{errorMessage}</p>
+            </div>
+          )}
+          <button
+            className='button is-medium is-primary is-fullwidth'
+            data-testid='button'
+            type='submit'
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

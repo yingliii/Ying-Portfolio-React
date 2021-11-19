@@ -6,6 +6,12 @@
   flex-direction: column;
   align-items: center;
 }
+.contact-body {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .field {
   display: flex;
   align-self: center;

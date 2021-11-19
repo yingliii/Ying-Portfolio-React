@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.footer ul li {
+  padding: 10px;
+}

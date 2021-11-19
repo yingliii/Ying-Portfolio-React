@@ -14,13 +14,13 @@ function App() {
       <Navbar />
       <main>
         <Switch>
-          <Route eact path='/'>
+          <Route exact path='/'>
             <Intro />
           </Route>
-          <Route eact path='/projects'>
+          <Route exact path='/projects'>
             <Projects />
           </Route>
-          <Route eact path='/contact'>
+          <Route exact path='/contact'>
             <Contact />
           </Route>
         </Switch>
